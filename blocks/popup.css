@@ -1,0 +1,143 @@
+/* --------------------------------- */
+/* Popup */
+
+.popup__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .5);
+    /*display: grid;*/
+    /*grid-template: 1fr 1fr 1fr / 1fr max-content 1fr;*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 0.5s linear;
+}
+
+.popup__overlay-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template: 1fr max-content 1fr / 1fr max-content 1fr;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 0.5s linear;
+}
+
+.popup__overlay_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__info {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr max-content 1fr;
+}
+
+.popup__overlay-order {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 0.5s linear;
+}
+
+.popup__overlay-order_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__form {
+    position: relative;
+    z-index: 100;
+    background: #f1f1f5;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr max-content 1fr;
+    min-height: 50vh;
+    width:  800px;
+    margin: 0;
+    padding: 0;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    box-sizing: border-box;
+    border: 2px solid #2699cc;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+.popup__form_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__content {
+    margin: 0;
+    padding: 10px;
+}
+
+.popup__close {
+    position: absolute;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0);
+    top: 15px;
+    right: 15px;
+    border: none;
+    outline: none;
+    color: #000000;
+    cursor: pointer;
+
+}
+
+.popup__close:hover {
+    opacity: .6;
+}
+
+@-webkit-keyframes popup-menu_visible {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1280px){
+
+    .popup__form {
+        width: 75vw;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    .popup__form {
+        width: 80vw;
+    }
+
+}
+
+
+@media screen and (max-width: 600px){
+
+    .popup__form {
+        width: 90vw;
+    }
+
+}
