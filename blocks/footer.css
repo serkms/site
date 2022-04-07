@@ -3,7 +3,7 @@
     padding: 20px;
     grid-row: 3/4;
     grid-column: 2/3;
-    background-color: #b8b8be;
+    background-color: var(--alternative-background-color);
     display: grid;
     column-gap: 50px;
     grid-auto-flow: column;
@@ -31,8 +31,17 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
-    color: #064867;
+    color: var(--main-color);
     grid-column: 2/3;
+    transition: all 1s ease;
+}
+
+.footer__phone:visited {
+    color: var(--main-color);
+}
+
+.footer__phone:hover {
+    color: var(--altenative-color);
 }
 
 .footer__email {
@@ -42,8 +51,17 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
-    color: #064867;
-    grid-column: 3/4
+    color: var(--main-color);
+    grid-column: 3/4;
+    transition: all 1s ease;
+}
+
+.footer__email:visited {
+    color: var(--main-color);
+}
+
+.footer__email:hover {
+    color: var(--altenative-color);
 }
 
 .footer__text {
@@ -61,6 +79,7 @@
 
     .footer {
         padding: calc(5px + (20 - 5) * ((100vw - 280px) / (1280 - 280)));
+        gap: calc(10px + (50 - 10) * ((100vw - 280px) / (1280 - 280)));
     }
 
     .footer__email {
@@ -86,7 +105,7 @@
 @media screen and (max-width: 800px){
 
     .footer__contact {
-        grid-template: max-content / 1fr 1fr;
+        grid-template: max-content / 1fr max-content;
     }
 
     .footer__email {
@@ -97,5 +116,50 @@
     .footer__phone {
         grid-row: 2/3;
         grid-column: 2/3
+    }
+}
+
+/*@media screen and (max-width: 800px){*/
+
+/*    .footer__contact {*/
+/*        grid-template: max-content / 1fr;*/
+/*    }*/
+/*    .footer__email {*/
+/*        grid-column: 1/2*/
+/*    }*/
+
+/*    .footer__phone {*/
+/*        grid-column: 1/2*/
+/*    }*/
+
+/*}*/
+
+@media screen and (max-width: 500px){
+
+    .footer {
+        grid-template: auto / 1fr;
+    }
+
+    .footer__contact {
+        grid-column: 1/3;
+        grid-template: max-content / 1fr;
+    }
+
+    .footer__email {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        text-align: center;
+    }
+
+    .footer__phone {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+    }
+
+    .footer__text {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
     }
 }
