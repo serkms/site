@@ -10,12 +10,6 @@
 
 
 .header {
-    /*margin: 0;*/
-    /*display: grid;*/
-    /*grid-template: max-content max-content / 1fr;*/
-    /*grid-column: 2/3;*/
-
-
     position: fixed;
     top: 0;
     right: 0;
@@ -27,13 +21,8 @@
 }
 
 .header__contact {
-    /*background: #f1f1f5;*/
     margin: 0;
     padding: 10px 10px 0 0;
-    display: grid;
-    grid-template: max-content / 1fr max-content max-content;
-    grid-row: 1/2;
-    grid-column: 1/2;
 }
 
 .header__contact_logo {
@@ -42,6 +31,9 @@
 
 .header__contact_menu {
     display: grid;
+    grid-template: max-content / 1fr max-content max-content;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 
 .header__contact-img {
@@ -59,12 +51,17 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
-    color: #064867;
+    color: var(--main-color);
     grid-column: 2/3;
+    transition: all 1s ease;
 }
 
 .header__phone:visited {
-    color: #064867;
+    color: var(--main-color);
+}
+
+.header__phone:hover {
+    color: var(--altenative-color);
 }
 
 .header__email {
@@ -74,16 +71,20 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 500;
-    color: #064867;
-    grid-column: 3/4
+    color: var(--main-color);
+    grid-column: 3/4;
+    transition: all 1s ease;
 }
 
 .header__email:visited {
-    color: #064867;
+    color: var(--main-color);
+}
+
+.header__email:hover {
+    color: var(--altenative-color);
 }
 
 .header__menu {
-    /*background: #f1f1f5;*/
     margin: 0;
     padding: 0;
     display: grid;
@@ -121,17 +122,13 @@
 }
 
 .header__link {
-    text-decoration: none;
-    color: #064867;
     margin: 0;
-    /*padding-bottom: 10px;*/
     font-size: 20px;
     font-weight: 600;
-    cursor: pointer;
 }
 
 .header__link:hover {
-    color: #2699cc;
+    color: var(--altenative-color);
 }
 
 .header__order {
@@ -140,42 +137,34 @@
     padding: 0 10px 0 0;
     grid-column: 3/4;
     grid-row: 1/2;
-    /*grid-column: 2/3;*/
     align-self: center;
 }
 
 @media screen and (max-width: 1280px) {
-
     .header__wrapper {
         padding: 0 calc(20px - (20 - 0) * ((100vw - 1240px) / (1280 - 1240))) 0 calc(20px - (20 - 0) * ((100vw - 1240px) / (1280 - 1240)));
     }
-
     .header__link {
         font-size: calc(16px + (20 - 16) * ((100vw - 800px) / (1280 - 800)));
     }
-
     .header__nav {
         column-gap: calc(30px + (50 - 30) * ((100vw - 800px) / (1280 - 800)));
     }
-
     .header__email {
         padding-left: calc(10px + (30 - 10) * ((100vw - 280px) / (1280 - 280)));;
         font-size: calc(12px + (18 - 12) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(14px + (22 - 14) * ((100vw - 280px) / (1280 - 280)));
     }
-
     .header__phone {
         font-size: calc(12px + (18 - 12) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(14px + (22 - 14) * ((100vw - 280px) / (1280 - 280)));
     }
-
     .header__img {
         width: calc(50px + (100 - 50) * ((100vw - 280px) / (1280 - 280)));
     }
 }
 
 @media screen and (max-width: 1240px) {
-
     .header__wrapper {
         padding: 0 20px 0 20px;
     }
@@ -185,26 +174,12 @@
     .header__nav {
         display: none;
     }
-
-    .burger__img {
-        display: block;
-        margin: 0;
-        width: 30px;
-        padding: 0 10px 0 0;
-        grid-column: 3/4;
-        grid-row: 1/2;
-        align-self: center;
-        cursor: pointer;
-    }
-
     .header__order {
         display: none;
     }
-
     .header__contact_menu {
         display: none;
     }
-
     .header__contact_logo {
         display: grid;
         grid-template: max-content / 1fr max-content max-content 1fr;
@@ -213,27 +188,21 @@
         align-self: center;
         padding: 0 10px 0 0;
     }
-
     .header__wrapper {
         padding: 20px 0 0 0;
     }
-
     .header__phone {
         padding: 0;
      }
-
     .header__email {
         padding: 0 0 0 20px;
     }
-
 }
 
 @media screen and (max-width: 500px){
-
     .header__contact_logo {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 320px){
@@ -242,18 +211,15 @@
         grid-row: 1/2;
         grid-column: 1/2;
     }
-
     .header__phone {
         grid-row: 1/2;
         grid-column: 1/2;
         text-align: right;
     }
-
     .header__email {
         grid-row: 2/3;
         grid-column: 1/2;
         padding-left: 0;
         text-align: right;
     }
-
 }
