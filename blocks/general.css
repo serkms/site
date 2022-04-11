@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     --main-color: #064867;
@@ -17,18 +20,13 @@ body {
     grid-column: 2/3;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 .page {
     min-height: 100vh;
     height: 100%;
     margin: 0 auto;
     font-family: 'Montserrat', 'Arial', sans-serif;
-    padding: 28px 0 24px;
-    display: grid;
-    grid-template:repeat(3, auto) /1fr minmax(auto, 1240px) 1fr;
+    padding: 25px;
+    max-width: 1240px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
@@ -41,7 +39,7 @@ html {
     overflow: hidden;
 }
 
-.app__button {
+.page__button {
     margin: 0;
     padding: 10px 20px;
     outline: none;
@@ -57,34 +55,34 @@ html {
     transition: all .5s ease;
 }
 
-.app__button:hover {
+.page__button:hover {
     background-color: var(--main-color);
 }
 
-.app__button_transparent {
+.page__button_transparent {
     background-color: var(--background-color);
     color: #2699cc;
 }
 
-.app__button_transparent:hover {
+.page__button_transparent:hover {
     background-color: var(--altenative-color);
     color: var(--alternative-button-text-color);
 }
 
-.app__section_center {
+.page__section_center {
     margin: 0;
     padding: 0;
     display: grid;
     grid-template: max-content / 1fr max-content 1fr;
 }
 
-.app__position_center {
+.page__position-center {
     margin: 0;
     padding: 20px 0 0 0;
     grid-column: 2/3;
 }
 
-.app__title {
+.page__title {
     z-index: 100;
     width: 100%;
     margin: 0;
@@ -96,7 +94,7 @@ html {
     font-weight: 700;
 }
 
-.app__chapter {
+.page__chapter {
     margin: 0;
     padding: 10px 0;
     text-align: left;
@@ -106,7 +104,7 @@ html {
     font-weight: 700;
 }
 
-.app__subchapter {
+.page__subchapter {
     margin: 0;
     padding: 10px 0 0 0;
     text-align: left;
@@ -126,7 +124,7 @@ html {
     font-weight: 600;
 }
 
-.app__text {
+.page__text {
     margin: 0;
     padding: 10px 0 0 0;
     text-align: left;
@@ -136,7 +134,7 @@ html {
     font-weight: 400;
 }
 
-.app__text_footer {
+.page__text_footer {
     color: var(--altenative-color);
 }
 
@@ -154,14 +152,14 @@ html {
     text-indent: 15px;
 }
 
-.app__list {
+.page__list {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
 }
 
-.app__list_mark {
+.page__list_mark {
     margin: 0;
     font-weight: 700;
     font-size: 22px;
@@ -169,21 +167,20 @@ html {
 
 }
 
-.app__section {
-    grid-column: 2/3;
+.page__section {
     margin: 0;
     padding: 40px 0;
 }
 
-.app__section_border {
+.page__section_border {
     border-top: 1px solid var(--altenative-color);
 }
 
-.app__section_gray {
+.page__section_gray {
     background: var(--alternative-background-color);
 }
 
-.app__link {
+.page__link {
     list-style: none;
     text-decoration: none;
     transition: all 1s ease;
@@ -191,11 +188,11 @@ html {
     cursor: pointer;
 }
 
-.app__link:hover {
+.page__link:hover {
     color: var(--altenative-color);
 }
 
-.app__link:visited {
+.page__link:visited {
     color: var(--main-color);
 }
 
@@ -249,43 +246,35 @@ html {
     .page {
         padding: 28px calc(5px + (20 - 5) * ((100vw - 280px) / (1280 - 280))) 24px calc(5px + (20 - 5) * ((100vw - 280px) / (1280 - 280)));
     }
-
-    .app__text {
+    .page__text {
         padding: calc(5px + (10 - 5) * ((100vw - 280px) / (1280 - 280))) 0 0 0;
         font-size: calc(14px + (16 - 14) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(18px + (26 - 18) * ((100vw - 280px) / (1280 - 280)));
      }
-
-    .app__section {
+    .page__section {
         padding: calc(16px + (40 - 16) * ((100vw - 280px) / (1280 - 280))) 0;
     }
-
-    .app__title {
+    .page__title {
         font-size: calc(20px + (40 - 20) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(26px + (60 - 26) * ((100vw - 280px) / (1280 - 280)));
     }
-
-    .app__subchapter {
+    .page__subchapter {
         font-size: calc(14px + (20 - 14) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(24px + (30 - 24) * ((100vw - 280px) / (1280 - 280)));
     }
-
     .app__mark {
         font-size: calc(14px + (16 - 14) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(18px + (26 - 18) * ((100vw - 280px) / (1280 - 280)));
     }
-
-    .app__list_mark {
+    .page__list_mark {
         font-size: calc(14px + (22 - 14) * ((100vw - 280px) / (1280 - 280)));
     }
-
-    .app__button {
+    .page__button {
         padding: calc(5px + (10 - 5) * ((100vw - 280px) / (1280 - 280))) calc(10px + (20 - 10) * ((100vw - 280px) / (1280 - 280)));
         font-size: calc(12px + (18 - 12) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(14px + (20 - 14) * ((100vw - 280px) / (1280 - 280)));
     }
-
-    .app__chapter {
+    .page__chapter {
         font-size: calc(16px + (30 - 16) * ((100vw - 280px) / (1280 - 280)));
         line-height: calc(25px + (45 - 25) * ((100vw - 280px) / (1280 - 280)));
     }

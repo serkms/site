@@ -3,12 +3,12 @@ document.querySelector('.config__sendMessageEmail').value = config.sendMessageEm
 document.querySelector('.config__titleMessageEmail').value = config.titleMessageEmail // Тема сообщения
 
 // Заполнение контактных данных (телефон и email)
-document.querySelectorAll('.contact__phone').forEach((item) => {
+document.querySelectorAll('.contact-phone').forEach((item) => {
     item.innerText = config.menuPhone;
     item.href = "tel:" + config.callPhone;
 })
 
-document.querySelectorAll('.contact__email').forEach((item) => {
+document.querySelectorAll('.contact-email').forEach((item) => {
     item.innerText = config.emailCompany;
     item.href = "mailto:" + config.emailCompany;
 })
@@ -52,7 +52,7 @@ class Card {
     generateCard() {
         this._element = this._getTemplate();
 
-        this._elementButton = this._element.querySelector('.app__button')
+        this._elementButton = this._element.querySelector('.page__button')
 
         this._element.querySelector('.card__img').src = this._img;
         this._element.querySelector('.card__title').textContent = this._title;
