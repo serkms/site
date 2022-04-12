@@ -1,0 +1,144 @@
+/* --------------------------------- */
+/* Going */
+
+.section3-card__list {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template: repeat(2, 1fr)/repeat(4, 1fr);
+    gap: 50px;
+}
+
+.section3__title {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: var(--main-text-color);
+    font-size: 16px;
+    line-height: 20px ;
+    font-weight: 600;
+}
+
+.section3__text {
+    margin: 0;
+    padding: 10px 0 0 0;
+    text-align: justify;
+    color: var(--main-text-color);
+    font-size: 14px;
+    line-height: 16px ;
+    font-weight: 400;
+}
+
+.section3__img {
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-self: start;
+}
+
+
+.section1-section3__list {
+    grid-row: 2/3;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template: auto /repeat(4, 1fr);
+    gap: 50px;
+}
+
+.section3__list {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid var(--altenative-color);
+    display: grid;
+    grid-template: max-content 1fr max-content / 1fr;
+}
+
+.section3__list-click {
+    cursor: pointer;
+}
+.section3__content {
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+.section3-button__hide {
+    display: none;
+}
+
+@media screen and (max-width: 1280px){
+    .section1-section3__list {
+        gap: calc(25px + (50 - 25) * ((100vw - 900px) / (1280 - 900)));
+    }
+    .section3__title {
+        font-size: calc(14px + (16 - 14) * ((100vw - 900px) / (1280 - 900)));
+        line-height: calc(17px + (20 - 17) * ((100vw - 900px) / (1280 - 900)));
+    }
+    .section3__text {
+        font-size: calc(12px + (14 - 12) * ((100vw - 900px) / (1280 - 900)));
+        line-height: calc(14px + (16 - 14) * ((100vw - 900px) / (1280 - 900)));
+    }
+    .section3__img {
+        height: calc(80px + (100 - 80) * ((100vw - 900px) / (1280 - 900)));
+    }
+}
+
+@media screen and (max-width: 900px){
+    .section1-section3__list {
+        grid-template: auto /repeat(3, 1fr);
+        gap: calc(25px + (30 - 25) * ((100vw - 800px) / (900 - 800)));
+    }
+    .section3__title {
+        font-size: calc(15px + (15.5 - 13) * ((100vw - 800px) / (900 - 800)));
+        line-height: calc(17px + (20 - 17) * ((100vw - 800px) / (900 - 800)));
+    }
+    .section3__text {
+        font-size: calc(13px + (14.5 - 12) * ((100vw - 800px) / (900 - 800)));
+        line-height: calc(15px + (16 - 15) * ((100vw - 800px) / (900 - 800)));
+    }
+    .section3__img {
+        height: calc(100px + (110 - 100) * ((100vw - 800px) / (900 - 800)));
+    }
+}
+
+@media screen and (max-width: 800px){
+    .section1-section3__list {
+        padding: 0 calc(5px + (40 - 5) * ((100vw - 500px) / (800 - 500)));
+        grid-template: auto/repeat(2, 1fr);
+        gap: calc(25px + (40 - 25) * ((100vw - 500px) / (800 - 500)));
+    }
+    .section3__title {
+        font-size: calc(13px + (16 - 13) * ((100vw - 500px) / (800 - 500)));
+        line-height: calc(17px + (20 - 17) * ((100vw - 500px) / (800 - 500)));
+    }
+    .section3__text {
+        font-size: calc(12px + (14 - 12) * ((100vw - 500px) / (800 - 500)));
+        line-height: calc(15px + (18 - 14) * ((100vw - 500px) / (800 - 500)));
+    }
+    .section3__img {
+        height: calc(100px + (200 - 100) * ((100vw - 500px) / (800 - 500)));
+    }
+}
+
+@media screen and (max-width: 500px){
+    .section1-section3__list {
+        padding: 0 calc(5px + (50 - 5) * ((100vw - 280px) / (500 - 280)));;
+        grid-template: auto/ 1fr;
+        gap: calc(10px + (30 - 10) * ((100vw - 280px) / (500 - 280)));
+    }
+    .section3__title {
+        font-size: calc(12px + (18 - 12) * ((100vw - 280px) / (500 - 280)));
+        line-height: calc(14px + (20 - 14) * ((100vw - 280px) / (500 - 280)));
+    }
+    .section3__text {
+        font-size: calc(13px + (15 - 13) * ((100vw - 280px) / (500 - 280)));
+        line-height: calc(16px + (20 - 16) * ((100vw - 280px) / (500 - 280)));
+    }
+    .section3__img {
+        height: calc(100px + (150 - 100) * ((100vw - 280px) / (500 - 280)));
+    }
+}

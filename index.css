@@ -10,7 +10,7 @@
 @import url('blocks/form.css');
 @import url('blocks/news.css');
 @import url('blocks/card.css');
-@import url('blocks/going.css');
+@import url('blocks/section3.css');
 @import url('blocks/header.css');
 @import url('blocks/burger.css');
 @import url('blocks/slider.css');
@@ -429,7 +429,7 @@
 /* --------------------------------- */
 /* Test & Go Going */
 
-/*.card-going__list {*/
+/*.card-section3__list {*/
 /*    padding: 0;*/
 /*    margin: 0;*/
 /*    display: grid;*/
@@ -605,7 +605,7 @@
 
 /*}*/
 
-/*.popup__content {*/
+/*.popup__container {*/
 /*    margin: 0;*/
 /*    padding: 10px;*/
 /*    !*border: 1px solid #2699cc;*!*/
@@ -977,7 +977,7 @@
 /*!* --------------------------------- *!*/
 /*!* Going *!*/
 
-/*.going-card__list {*/
+/*.section3-card__list {*/
 /*    padding: 0;*/
 /*    margin: 0;*/
 /*    display: grid;*/
@@ -985,7 +985,7 @@
 /*    gap: 50px;*/
 /*}*/
 
-/*.going__title {*/
+/*.section3__title {*/
 /*    margin: 0;*/
 /*    padding: 0;*/
 /*    text-align: left;*/
@@ -995,7 +995,7 @@
 /*    font-weight: 600;*/
 /*}*/
 
-/*.going__text {*/
+/*.section3__text {*/
 /*    margin: 0;*/
 /*    padding: 10px 0 0 0;*/
 /*    text-align: left;*/
@@ -1005,7 +1005,7 @@
 /*    font-weight: 400;*/
 /*}*/
 
-/*.going__img {*/
+/*.section3__img {*/
 /*    object-fit: cover;*/
 /*    object-position: center;*/
 /*    display: block;*/
@@ -1017,7 +1017,7 @@
 /*}*/
 
 
-/*.testgo-going__list {*/
+/*.section1-section3__list {*/
 /*    grid-row: 2/3;*/
 /*    padding: 0;*/
 /*    margin: 0;*/
@@ -1026,7 +1026,7 @@
 /*    gap: 50px;*/
 /*}*/
 
-/*.going__list {*/
+/*.section3__list {*/
 /*    margin: 0;*/
 /*    padding: 10px;*/
 /*    border: 1px solid #2699cc;*/
@@ -1034,12 +1034,12 @@
 /*    grid-template: max-content 1fr max-content / 1fr;*/
 /*}*/
 
-/*.going__content {*/
+/*.section3__content {*/
 /*    margin: 0;*/
 /*    padding: 10px 0 0 0;*/
 /*}*/
 
-/*.going-button__hide {*/
+/*.section3-button__hide {*/
 /*    display: none;*/
 /*}*/
 

@@ -99,7 +99,7 @@ const addNews = (firstNews, lastNews) => {
 }
 
 const nextSlide = () => {
-    //Если номер последней предпологаемой записи меньше, чем количество новостей
+    //Если номер последней предполагаемой записи меньше, чем количество новостей
     if (lastSlideNews + stepSlideNews < allSlideNews) {
         removeNews(firstSlideNews, lastSlideNews)
 
@@ -132,7 +132,7 @@ const nextSlide = () => {
 }
 
 const prevSlide = () => {
-    //Если номер первой предпологаемой показываемой записи бльше, чем 0
+    //Если номер первой предполагаемой показываемой записи больше, чем 0
     if (firstSlideNews - stepSlideNews > 0) {
         removeNews(firstSlideNews, lastSlideNews)
 
@@ -172,5 +172,3 @@ buttonPrev.addEventListener('click', prevSlide);
 for (let i = firstSlideNews; i <= lastSlideNews; i++) {
     itemsSlider[i].classList.remove('news__item_hide');
 }
-
-// buttonPrev.setAttribute("disabled", "disabled");ute("disabled", "disabled");
