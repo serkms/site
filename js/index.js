@@ -120,14 +120,31 @@ class Popup {
 class PopupInfo extends Popup {
     constructor(popupOverlaySelector, popupFormSelector, handlerOverlayActive, handlerFormActive) {
         super(popupOverlaySelector, popupFormSelector, handlerOverlayActive, handlerFormActive);
-        this._name = this._popupFormSelector.querySelector('.popup-info__name');
-        this._text = this._popupFormSelector.querySelector('.popup-info__text');
+        this._content = this._popupFormSelector.querySelector('.popup__content');
     }
+
     open(name, text) {
         super.open(name, text);
-        this._name.textContent = name;
-        this._text.textContent = text;
+
+        this._content.insertAdjacentHTML("beforebegin", `<h2 class="popup-info__name page__chapter">${name}</h2>`)
+
+        text.forEach((item) => {
+            this._content.insertAdjacentHTML("beforebegin", `<p class="popup-info__text page__text">${item}</p>`)
+        })
+
     }
+
+    close() {
+        super.close();
+
+        this._popupFormSelector.querySelector('.popup-info__name').remove();
+
+        this._popupFormSelector.querySelectorAll('.popup-info__text').forEach((index) => {
+            this._popupFormSelector.querySelector('.popup-info__text').remove();
+        })
+
+    };
+
 }
 
 //Расширение класса формы Бургер меню на базе класса Popup
@@ -140,7 +157,7 @@ class PopupMenu extends Popup {
     }
 }
 
-//Константв для оверлея
+//Константы для оверлея
 
 //Создание инстанса для формы Инфо
 const elementPopupOverlayInfo = '.popup__overlay-info';
@@ -160,15 +177,27 @@ document.querySelector('.burger__img').addEventListener('click', () => {
 });
 
 //Создание слушателей для пунктов бургер меню
+
+//Получаем все селекторы, где есть дата атрибут goto
 const burgerMenuLinks = document.querySelectorAll('.burger__link[data-goto]');
+
+//если найден хотя бы один селектор
 if (burgerMenuLinks.length > 0) {
+
+    //цикл по найденным селекторам
     burgerMenuLinks.forEach((item) => {
         item.addEventListener('click', (e) => {
+
+            //получаем данные селектора
             const menuLinkData = e.target;
             if (menuLinkData.dataset.goto && document.querySelector(menuLinkData.dataset.goto)) {
+
+                //получаем дата атрибут селектора
                 const gotoBlock = document.querySelector(menuLinkData.dataset.goto);
+                //верхние координаты блока к которому переходим + сколько уже прокручено по вертикали - высота фиксированного хедера
                 const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('.header__wrapper').offsetHeight
 
+                //переход к координатам блока
                 window.scrollTo( {
                     top: gotoBlockValue,
                     behavior: "smooth"

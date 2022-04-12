@@ -64,6 +64,7 @@
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr max-content 1fr;
     min-height: 50vh;
+    max-height: 90vh;
     width:  800px;
     margin: 0;
     padding: 0;
@@ -73,6 +74,7 @@
     border: 2px solid var(--altenative-color);
     visibility: hidden;
     opacity: 0;
+    overflow: auto;
 }
 
 
@@ -81,7 +83,7 @@
     opacity: 1;
 }
 
-.popup__content {
+.popup__container {
     margin: 0;
     padding: 10px;
 }
@@ -103,6 +105,12 @@
 
 .popup__close:hover {
     opacity: .6;
+}
+
+
+.popup-info__text {
+    text-indent: 1.5rem;
+    text-align: justify;
 }
 
 @-webkit-keyframes popup-menu_visible {
